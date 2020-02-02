@@ -23,10 +23,7 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      { vars: 'all', args: 'none', ignoreRestSiblings: false },
-    ],
+    '@typescript-eslint/no-unused-vars': ['off'],
     '@typescript-eslint/class-name-casing': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     'sonarjs/cognitive-complexity': ['error', 7],

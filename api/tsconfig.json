@@ -1,16 +1,13 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "esModuleInterop": true,
     "target": "ES2020",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
     "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "*": ["node_modules/*"]
-    }
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["src/**/*"]
+  "exclude": ["node_modules"]
 }

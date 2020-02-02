@@ -4,11 +4,11 @@
   "description": "Seasonal hats for your online avatar",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-nodemon --entry ./src/index.ts",
+    "dev": "tsnd --respawn ./src/index.ts",
     "lint": "eslint './src/**/*.{jsx,js,ts,tsx,json}' && tsc --noEmit",
     "lint:fix": "eslint --fix './src/**/*.{jsx,js,ts,tsx,json}' && tsc --noEmit",
     "codegen_with_docker": "../codegen/codegen_with_docker.sh",
-    "codegen": "../codegen/codegen.sh"
+    "codegen": "./codegen/codegen.sh"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/rgbdelta/Avatar-Hats#readme",
   "devDependencies": {
-    "@trongnd/ts-nodemon": "^1.0.3",
+    "@types/express": "^4.17.2",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "@typescript-eslint/parser": "^2.15.0",
     "eslint": "^6.8.0",
@@ -39,9 +39,15 @@
     "eslint-plugin-sonarjs": "^0.5.0",
     "prettier": "^1.19.1",
     "sonarjs": "^1.0.0",
+    "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.7.5"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "@decorators/di": "^1.0.2",
+    "@decorators/express": "^2.3.0",
+    "@types/morgan": "^1.7.37",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "tsyringe": "^4.0.1"
   }
 }
