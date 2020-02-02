@@ -1,0 +1,66 @@
+@import '../constants/Colors.scss';
+@import '../constants/Metrics.scss';
+
+.typography {
+  letter-spacing: -0.2;
+  color: $text-dark;
+  a {
+    color: $text-primary !important;
+  }
+
+  &.bolder {
+    font-weight: bolder;
+  }
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.light {
+    color: $text-light;
+  }
+  &.dark {
+    color: $text-dark;
+  }
+  &.muted {
+    color: $text-muted;
+  }
+  &.primary {
+    color: $text-primary;
+  }
+  &.success {
+    color: $text-success;
+  }
+  &.info {
+    color: $text-info;
+  }
+  &.warning {
+    color: $text-warning;
+  }
+  &.danger {
+    color: $text-danger;
+  }
+
+  &.h1 {
+    font-size: 35;
+    font-weight: bolder;
+    padding-bottom: $spacing-normal;
+  }
+  &.h2 {
+    font-size: 25;
+    font-weight: 600;
+    padding-bottom: $spacing-small;
+  }
+  &.h3 {
+    font-size: 20;
+    font-weight: 500;
+    padding-bottom: $spacing-small;
+  }
+  &.p {
+    font-size: 16;
+    padding-bottom: $spacing-small;
+  }
+  &.p-small {
+    font-size: 13;
+    padding-bottom: $spacing-small;
+  }
+}

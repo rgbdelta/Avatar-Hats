@@ -1,0 +1,14 @@
+// SPACING
+$spacing-small: 6px;
+$spacing-normal: 12px;
+$spacing-large: 18px;
+$spacing-very-large: 24px;
+
+// BORDER RADIUS
+$border-radius-small: 3px;
+$border-radius-normal: 6px;
+
+// SHADOWS
+@mixin shadow-normal {
+  box-shadow: 0px 5px 15px rgba(60, 60, 60, 0.3);
+}
