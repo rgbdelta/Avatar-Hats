@@ -1,7 +1,7 @@
 {
   "name": "website",
   "version": "1.0.0",
-  "description": "The front end for the hats app",
+  "description": "The web frontend for the hats app",
   "main": "dist/src/index.js",
   "scripts": {
     "dev": "VERSION=$(git rev-parse --short HEAD) API_URL=localhost:8000 node ./scripts/bundler-with-proxy.js",
