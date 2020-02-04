@@ -9,6 +9,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "13.7"
-      - run: cd api
       - run: npm install
+        working-directory: api
       - run: npm run lint
+        working-directory: api
