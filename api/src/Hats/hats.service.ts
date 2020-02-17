@@ -2,7 +2,7 @@ import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class HatsService {
-  addHat(): string {
+  addHat(file: any): string {
     return "Hello World!";
   }
 }
