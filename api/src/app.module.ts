@@ -1,26 +1,26 @@
-import { Module, Inject } from "@nestjs/common";
+import { Module } from "@nestjs/common";
+import { ConfigModule } from "@nestjs/config";
 import { MulterModule } from "@nestjs/platform-express";
+import * as os from "os";
 import { HatsController } from "./Hats/hats.controller";
 import { HatsService } from "./Hats/hats.service";
-import { diskStorage } from "multer";
-import { ConfigModule, ConfigService } from "@nestjs/config";
-
-MulterModule.registerAsync({
-  imports: [ConfigModule],
-  inject: [ConfigService],
-  useFactory: async () => ({
-    storage: diskStorage({
-      destination: "upload-temp",
-      filename: (req, file, cb) => {
-        return cb(null, file.originalname);
-      }
-    })
-  })
-});
 
 @Module({
-  imports: [MulterModule, ConfigModule.forRoot()],
+  imports: [
+    ConfigModule.forRoot(),
+    MulterModule.register({
+      dest: os.tmpdir()
+    })
+  ],
   controllers: [HatsController],
   providers: [HatsService]
 })
-export class AppModule {}
+export class AppModule {
+  // TODO: use the FilesController to return a url to a file using the middleware
+  // configure(consumer: MiddlewareConsumer) {
+  //   consumer.apply(StaticFilesMiddleware).forRoutes({
+  //     path: `${config.STATIC_FILES_ROUTE}/*`,
+  //     method: RequestMethod.GET
+  //   });
+  // }
+}
